@@ -1,0 +1,367 @@
+:root {
+  --primary-color: beige;
+  --primary-color-light: #1f2125;
+  --primary-color-extra-light: #35373b;
+  --secondary-color: #49c756;
+  --secondary-color-dark: #33a343;
+  --text-light: #878787;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --orange: rgb(238, 158, 10);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.itloog__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 7.2rem 1rem;
+}
+
+.nav__icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Adjust as needed */
+}
+
+.user-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #001f3d;
+    overflow-y: auto;
+  }
+
+.nav__logo {
+  max-width: 130px;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 3rem;
+  margin: auto;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #f8dcbf;
+  margin: auto;
+}
+
+.link a:hover{
+    color: #001f3d;
+}
+
+
+.header__container {
+  position: relative;
+  padding-top: 5rem;
+  padding-left: 5%;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+  z-index: -1;
+}
+
+.header__blur {
+  bottom: 5rem;
+  right: 0;
+}
+
+.header__content h1 {
+  padding-top: 130px;
+  font-size: 55px;
+  font-weight: 700;
+  margin-top: auto;
+  text-align: center;
+  line-height: 0;
+  color: #f8dcbf;
+}
+
+.header__content h1 .dp {
+    padding-top: 90px;
+    font-size: 55px;
+    font-weight: 700;
+    margin-top: auto;
+    text-align: center;
+    line-height: 0;
+    color: #f8dcbf;
+  }
+
+
+.header__search {
+  position: relative;
+  padding-top: 2rem;
+  padding-left: 5%;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.header__image {
+  position: fixed;
+  bottom: -6px;
+  padding-right: 130px;
+  z-index: -5;
+  right: 30px;
+}
+
+.header__image img {
+  max-width: 110px;
+  width: 100%; 
+  margin: auto;
+  border-radius: 10%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+table {
+    width: 1100px;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #cecdcd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ebeaea;
+}
+
+
+a{
+  color: #7f8db0;
+}
+
+.wrapper{
+ width: 100%;
+ height: 100%;
+ position: sticky;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  background: #045174;
+  width: 100%;
+  height: 60px;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar_center_text {
+  text-align: center;
+  flex-grow: 1; /* Allows the center text to expand and fill the space */
+  color: #ffffff;
+}
+
+.navbar_center_text a {
+  color: #f8dcbf;
+  margin: 0 20px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar_center_text a:hover {
+  color: #001f3d;
+}
+
+.navbar .navbar_left .logo a{
+  font-family: 'Trade Winds';
+  font-size: 20px;
+}
+
+.navbar .navbar_right{
+  display: flex;
+}
+
+.navbar .navbar_right img{
+ width: 40px;
+ margin-top: 0;
+ height: 40px;
+ border-radius: 50%;
+}
+
+.navbar .navbar_right .icon_wrap{
+ cursor: pointer;
+}
+
+.navbar .navbar_right .notifications{
+ margin-right: 25px;
+}
+
+.navbar .navbar_right .notifications .icon_wrap{
+ font-size: 28px;
+}
+
+.navbar .navbar_right .profile,
+.navbar .navbar_right .notifications{
+ position: relative;
+}
+
+.navbar .profile .profile_dd,
+.notification_dd{
+ position: absolute;
+ top: 48px;
+ right: -13px;
+ user-select: none;
+ background: #fff;
+ border: 1px solid #c7d8e2;
+ width: 350px;
+ height: auto;
+ display: none;
+ border-radius: 3px;
+ box-shadow: 10px 10px 35px rgba(0,0,0,0.125),
+             -10px -10px 35px rgba(0,0,0,0.125);
+}
+
+.navbar .profile .profile_dd{
+ position: absolute;
+ top: 48px;
+ right: -1px;
+ user-select: none;
+ background: #fff;
+ border: 1px solid #c7d8e2;
+ width: 350px;
+ height: auto;
+ display: none;
+ border-radius: 3px;
+ box-shadow: 10px 10px 35px rgba(0,0,0,0.125),
+             -10px -10px 35px rgba(0,0,0,0.125);
+}
+
+.navbar .profile .profile_dd:before,
+.notification_dd:before{
+   content: "";
+   position: absolute;
+   top: -20px;
+   right: 15px;
+   border: 10px solid;
+   border-color: transparent transparent #fff transparent;
+}
+
+.navbar .navbar_right .profile .icon_wrap{
+ display: flex;
+ align-items: center;
+}
+
+.navbar .navbar_right .profile .name{
+ display: inline-block;
+ margin: 0 10px;
+}
+
+.navbar .navbar_right .icon_wrap:hover,
+.navbar .navbar_right .profile.active .icon_wrap,
+.navbar .navbar_right .notifications.active .icon_wrap{
+ color: #001f3d;
+}
+
+.navbar .profile .profile_dd{
+ width: 225px;
+}
+.navbar .profile .profile_dd:before{
+ right: 10px;
+}
+
+.navbar .profile .profile_dd ul li {
+   border-bottom: 1px solid #f1f2f4;
+   list-style: none;
+}
+
+.navbar .profile .profile_dd ul li  a{
+   display: block;
+   padding: 15px 35px;
+   position: relative;
+}
+
+.navbar .profile .profile_dd ul li  a .picon{
+ display: inline-block;
+ width: 30px;
+}
+
+.navbar .profile .profile_dd ul li  a:hover{
+ color: #3b80f9;
+ background: #f0f5ff;
+ border-bottom-left-radius: 0;
+ border-bottom-right-radius: 0;
+}
+
+.navbar .profile .profile_dd ul li.profile_li a:hover {
+   background: transparent;
+   cursor: default;
+   color: #7f8db0;
+}
+
+.navbar .profile .profile_dd ul li .btn{
+   height: 32px;
+   padding: 7px 10px;
+   color: #fff;
+   border-radius: 3px;
+   cursor: pointer;
+   text-align: center;
+   background: #3b80f9;
+   width: 125px;
+   margin: 5px auto 15px;
+}
+
+.navbar .profile .profile_dd ul li .btn:hover{
+ background: #6593e4;
+}
+
+.navbar .profile.active .profile_dd,
+.navbar .notifications.active .notification_dd{
+ display: block;
+}
