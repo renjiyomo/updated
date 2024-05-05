@@ -1,0 +1,98 @@
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   background: #045174;
+}
+
+.form-container form{
+   padding:20px;
+   border-radius: 15px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background: white;
+   text-align: center;
+   width: 450px;
+}
+
+
+.form-container form h3{
+   font-size: 25px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color:#333;
+}
+
+
+.form-container form input:-webkit-autofill,
+.form-container form select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #ffffff inset
+}
+
+
+.form-container form input,
+.form-container form select{
+   width: 100%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   border: 0.2px solid;
+   border-color: rgb(210, 210, 210);
+   background: transparent;
+   border-radius: 15px;
+   box-shadow: 0 0.9px 0 0 rgb(212, 212, 212) inset
+}
+
+
+.form-container form input:focus,
+.form-container form select:focus{
+   border: 1.4px solid #045174;
+}
+
+
+.form-container form .form-btn{
+   background: #045174;
+   color:#fff;
+   text-transform: capitalize;
+   font-size: 18px;
+   cursor: pointer;
+   font-weight: bold;
+   border: none;
+   box-shadow: none;
+}
+
+.form-container form .form-btn:hover{
+   background: #034969;
+   color:#fff;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 14px;
+   color:#333;
+}
+
+.form-container form p a{
+   color:#045174;
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: #001f3d;
+   color:#fff;
+   border-radius: 15px;
+   font-size: 14px;
+   height: 30px;
+   padding:5px;
+}

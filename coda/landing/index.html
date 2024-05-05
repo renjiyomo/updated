@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="Register/SignIn/Page/css/all.min.css" />
+  <link rel="stylesheet" href="Register/SignIn/Page/css/fontawesome.min.css" />
+  <title>CSD Faculty</title>
+  <style>
+    /* Styles for modal */
+    .modal-container {
+      display: none;
+      position: absolute;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 100%;
+    }
+
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">
+      <a href="#"><img src="imahe/FAST.png" alt="logo" /></a>
+    </div>
+    <ul class="nav__links">
+      <li class="link"><a href="#">Home</a></li>
+      <li class="link"><a href="#about">About</a></li>
+      <li class="link"><a href="#services">Services </a></li>
+      <li class="link"><a href="#team">Team</a></li>
+    </ul>
+    <a href="Register/SignIn/signin.php"><button class="btn">Login</button></a>
+  </nav>
+
+  <header class="itloog__container header__container" id="homealone">
+    <div class="header__content">
+      <h4 class="CSD">FACULTY AUTOMATED SCHEDULE TRACKER</h4>
+      <h1><span>CSD</span> FACULTY</h1>
+      <p>
+        Regular Professors
+      </p>
+      
+      
+    </div>
+    <div class="header__image">
+      <img src="imahe/torch.png" alt="header" />
+    </div>
+  </header>
+
+  <section class="section__container about__container" id="about">
+    <h2 class="about__header">ABOUT</h2>
+    <p class="section__subheader">
+      Discover an easy way to connect with Regular CSD professors. This website simplifies knowing their availability and schedules to ensure you can reach out whenever you have concerns.
+    </p>
+  </section>
+
+  <section class="section__container explore__container" id="services">
+    <div class="explore__header">
+      <h2 class="service__header">SERVICES</h2>
+      <div class="explore__nav">
+      </div>
+    </div>
+  
+    <div class="explore__grid">
+      <div class="explore__card">
+        <span><i class="fa-sharp fa-solid fa-list-check" style="color: #ffffff;"></i></span>
+        <h4>Availability</h4>
+        <p>
+          Know the professor's available time and day for consultation. Students have convenient access to view professors' availability via the user-friendly online platform for their academic inquiries and to seek guidance at their preferred times.
+        </p>
+      </div>
+
+      <div class="explore__card">
+        <span><i class="fa-regular fa-clock"></i></span>
+        <h4>Schedule</h4>
+        <p>
+          View the day-to-day schedule of regular professors in the Computer Studies Department 
+          including their consultation hours.
+        </p>
+      </div>
+
+      <div class="explore__card">
+        <span><i class="fa-solid fa-user"></i></span>
+        <h4>Course</h4>
+        <a href="#" onclick="displayModal('modalBSIS')">Bachelor of Science in Information Systems (BSIS)</a><br>
+        
+        <a href="#" onclick="displayModal('modalBSCS')">Bachelor of Science in Computer Science (BSCS)</a><br>
+        
+        <a href="#" onclick="displayModal('modalIT')">Bachelor of Science in Information Technology (BSIT)</a><br>
+        
+        <a href="#" onclick="displayModal('modalAnimation')">Bachelor of Science in Information Technology - Major in Animation (BSITAnim)</a><br>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <div class="center">
+      <h1>Creators</h1>
+    </div>
+
+    <div class="team-content">
+      <div class="box">
+        <img src="imahe/profile/zyra.jpg">
+        <h3>Kristine Zyra Mae Arevalo</h3>
+        <h5>kzmba2022-9769-26289@bicol-u.edu.ph</h5>
+        <p>+639983514612</p>
+        <div class="icons">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="imahe/profile/hala.jpeg">
+        <h3>Madel Jandra Bautista</h3>
+        <h5>mjnb2022-2951-44568@bicol-u.edu.ph</h5>
+        <p>+639157323568</p>
+        <div class="icons">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="imahe/profile/brogais.jpg">
+        <h3>Justine Bragais</h3>
+        <h5>jb2022-3574-32403@bicol-u.edu.ph</h5>
+        <p>+639949940410</p>
+        <div class="icons">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="imahe/profile/batag.jpeg">
+        <h3>Jem Casurog</h3>
+        <h5>jnc2022-3191-58503@bicol-u.edu.ph</h5>
+        <p>+639107366307</p>
+        <div class="icons">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="imahe/profile/thea.jpg">
+        <h3>Althea Lobos</h3>
+        <h5>arl2022-6288-68920@bicol-u.edu.ph</h5>
+        <p>+639613559041</p>
+        <div class="icons">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="imahe/profile/bonak.jpeg">
+        <h3>Mark Erick Serrano</h3>
+        <h5>meps2022-5939-82677@bicol-u.edu.ph</h5>
+        <p>+639456823067</p>
+        <div class="icons">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section__container footer__container" id="footer">
+    <div class="footer__col">
+      <h4>Creator</h4>
+      <a href="#footer">Arevalo, Kristine Zyra Mae</a>
+      <a href="#footer">Bautista, Madel Jandra</a>
+      <a href="#footer">Bragais, Justine</a>
+      <a href="#footer">Casurog, Jem</a>
+      <a href="#footer">Lobos, Althea</a>
+      <a href="#footer">Serrano, Mark Erick</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Bicol University</h4>
+      <a href="#footer">Campus: Polangui</a>
+      <a href="#footer">Course: BSIS</a>
+      <a href="#footer">Year&Block: 2A</a>
+    </div>
+
+  </footer>
+
+  <div class="footer__bar">
+    Copyright © 2024 FAST. All rights reserved.
+  </div>
+
+  <!-- Modal for BSIS -->
+  <div id="modalBSIS" class="modal-container">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modalBSIS')">&times;</span>
+      <div id="modalContentBSIS">
+        <p>BACHELOR OF SCIENCE IN INFORMATION SYSTEMS (BSIS)</p>
+      <p>LEARNING OUTCOMES:</p><br>
+      <p>1. APPLY KNOWLEDGE OF BUSINESS PROCESSES, COMPUTING, MATHEMATICS, AND SOCIAL SCIENCES APPROPRIATE TO INFORMATION SYSTEMS.</p> <br>
+      <p>2. ANALYZE A PROBLEM, IDENTIFY AND DEFINE THE COMPUTING REQUIREMENTS WITH RESPECT TO ORGANIZATIONAL FACTORS APPROPRIATE TO ITS SOLUTION AND PLAN STRATEGIES FOR THEIR SOLUTION.</p><br>
+      <p>3. EVALUATE INFORMATION SYSTEMS IN TERMS OF GENERAL QUALITY ATTRIBUTES AND POSSIBLE TRADE-OFFS PRESENTED WITH THE GIVEN REQUIREMENT.</p><br>
+      <p>4. DESIGN, IMPLEMENT, AND EVALUATE INFORMATION SYSTEMS, PROCESSES, COMPONENTS, OR PROGRAMS AND  SOURCE COST-BENEFIT EFFICIENT ALTERNATIVES TO MEET DESIRED NEEDS, GOALS AND CONSTRAINTS.</p><br>
+      <p>5. USE KNOWLEDGE AND UNDERSTANDING OF ENTERPRISES IN MODELING AND DESIGN OF INFORMATION SYSTEMS.</p><br>
+      <p>6. DEPLOY AND USE EFFECTIVELY SKILLS, TOOLS, AND TECHNIQUES NECESSARY FOR INFORMATION SYSTEMS PRACTICE.</p><br>
+      <p>7. FUNCTION EFFECTIVELY ON TEAMS (RECOGNIZING THE DIFFERENT ROLES WITHIN A TEAM AND DIFFERENT WAYS OF ORGANIZING TEAMS) TO ACCOMPLISH A COMMON GOAL.</p><br>
+      <p>8. COMMUNICATE EFFECTIVELY WITH ARRANGE OF AUDIENCES. COMMUNICATION SKILLS INCLUDES TECHNICAL WRITING, PRESENTATION AND NEGOTIATION, AND NUMERACY.</p><br>
+      <p>9. RECOGNIZE THE LEGAL, SOCIAL, ETHICAL AND PROFESSIONAL ISSUES INVOLVED IN THE EXPLOITATION OF COMPUTER TECHNOLOGY AND BE GUIDED BY THE ADOPTION OF APPROPRIATE PROFESSIONAL, ETHICAL AND PRACTICES BOTH IN THE LOCAL AND GLOBAL COMMUNITY.</p><br>
+      <p>10. RECOGNIZE THE NEED FOR AND ENGAGE IN AN INDEPENDENT AND LIFE-LONG LEARNING, PLANNING SELF-LEARNING AND IMPROVING PERFORMANCE AS THE FOUNDATION FOR ON-GOING PROFESSIONAL DEVELOPMENT.</p><br>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalBSCS" class="modal-container">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modalBSCS')">&times;</span>
+      <div id="modalContentBSCS">
+        <p>BACHELOR OF SCIENCE IN COMPUTER SCIENCE PROGRAM (BSCS)</p>
+        <p>LEARNING OUTCOMES:</p><br>
+      <p>1. APPLY KNOWLEDGE OF COMPUTING FUNDAMENTALS, KNOWLEDGE OF A COMPUTING SPECIALIZATION, AND MATHEMATICS, SCIENCE, AND DOMAIN KNOWLEDGE APPROPRIATE FOR THE COMPUTING SPECIALIZATION TO THE ABSTRACTION AND CONCEPTUALIZATION OF COMPUTING MODELS FROM DEFINED PROBLEMS AND REQUIREMENTS.</p><br>
+      <p> 2. IDENTIFY, ANALYZE, FORMULATE, RESEARCH LITERATURE, AND SOLVE COMPLEX COMPUTING PROBLEMS AND REQUIREMENTS REACHING SUBSTANTIATED CONCLUSIONS USING FUNDAMENTAL PRINCIPLES OF MATHEMATICS, COMPUTING SCIENCES, AND RELEVANT DOMAIN PRINCIPLES. </p><br>
+      <p> 3. AN ABILITY TO APPLY MATHEMATICAL FOUNDATIONS, ALGORITHMIC PRINCIPLES AND COMPUTER SCIENCE THEORY IN THE MODELING AND DESIGN OF COMPUTER-BASED SYSTEMS IN A WAY THAT DEMONSTRATES COMPREHENSION OF THE TRADEOFF INVOLVED IN DESIGN CHOICES. </p><br>
+      <p> 4. KNOWLEDGE AND UNDERSTANDING OF INFORMATION SECURITY ISSUES IN RELATION TO THE DESIGN, DEVELOPMENT AND USE OF INFORMATION SYSTEM. </p><br>
+      <p> 5. DESIGN AND EVALUATE SOLUTIONS FOR COMPLEX COMPUTING PROBLEMS, AND DESIGN AND EVALUATE SYSTEMS, COMPONENTS, OR PROCESSES THAT MEET SPECIFIED NEEDS WITH APPROPRIATE CONSIDERATION FOR PUBLIC HEALTH AND SAFETY, CULTURAL, SOCIETAL, AND ENVIRONMENTAL CONSIDERATIONS. </p><br>
+      <p> 6. CREATE, SELECT, ADAPT AND APPLY APPROPRIATE TECHNIQUES, RESOURCES AND MODERN COMPUTING TOOLS TO COMPLEX COMPUTING ACTIVITIES, WITH AN UNDERSTANDING OF THE LIMITATIONS TO ACCOMPLISH A COMMON GOAL. </p><br>
+      <p> 7. FUNCTION EFFECTIVELY AS AN INDIVIDUAL AND AS A MEMBER OR LEADER IN DIVERSE TEAMS AND IN MULTIDISCIPLINARY SETTINGS. </p><br>
+      <p> 8. COMMUNICATE EFFECTIVELY WITH THE COMPUTING COMMUNITY AND WITH SOCIETY AT LARGE ABOUT COMPLEX COMPUTING ACTIVITIES BY BEING ABLE TO COMPREHEND AND WRITE EFFECTIVE REPORTS, DESIGN DOCUMENTATION, MAKE EFFECTIVE PRESENTATIONS, AND GIVE AND UNDERSTAND CLEAR INSTRUCTIONS. </p><br>
+      <p> 9. AN ABILITY TO RECOGNIZE THE LEGAL, SOCIAL, ETHICAL AND PROFESSIONAL ISSUES INVOLVED IN THE UTILIZATION OF COMPUTER TECHNOLOGY AND BE GUIDED BY THE ADOPTION OF APPROPRIATE PROFESSIONAL, ETHICAL AND LEGAL PRACTICES. </p><br>
+      <p> 10. RECOGNIZE THE NEED AND HAVE THE ABILITY, TO ENGAGE IN INDEPENDENT LEARNING FOR CONTINUAL DEVELOPMENT AS A COMPUTING PROFESSIONAL. </p><br>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalIT" class="modal-container">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modalIT')">&times;</span>
+      <div id="modalContentIT">
+        <p>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY (BSIT)</p>
+        <p>LEARNING OUTCOMES:</p><br>
+    <p>1. APPLY KNOWLEDGE OF COMPUTING, SCIENCE, AND MATHEMATICS APPROPRIATE TO THE DISCIPLINE.</p><br>
+    <p>2. UNDERSTAND BEST PRACTICES AND STANDARDS AND THEIR APPLICATIONS</p><br>
+    <p>3. ANALYZE COMPLEX PROBLEMS, AND IDENTIFY AND DEFINE THE COMPUTING REQUIREMENTS APPROPRIATE TO ITS SOLUTION</p><br>
+    <p>4. IDENTIFY AND ANALYZE USER NEEDS AND TAKE THEM INTO ACCOUNT IN THE SELECTION CREATION, EVALUATION AND EVALLIATION OF COMPUTER-BASED SYSTEMS</p><br>
+    <p>5. DESIGN, IMPLEMENT AND EVALUATE COMPUTER-BASED SYSTEMS, PROCESSES, COMPONENTS TRAINING PROGRAMS TO MEET DESIRED NEEDS AND REQUIREMENTS U STRAINTS</p><br>
+    <p>6. INTEGRATE IT-BASED SOLUTION INTO THE USER-ENVIRONMENT EFFECTIVELY</p><br>
+    <p>7. APPLY THE KNOWLEDGE THROUGH THE USE CORRENT TECHNIQUES, SKILLS, TOOLS, AND PRACTICES NECESSARY HOP THE IT PROFESSION</p><br>
+    <p>8. FUNCTION EFFECTIVELY AS A MEMBER OR LEADER OF A DEVELOPMENT TEAM RECOGNIZING THE DIFFERENT ROLES WITHIN A TEAM TO ACCOMPLISH A COMMON GOAL</p><br>
+    <p>9. ASSIST IN THE CREATION OF AN IT PROJECT PLAN</p><br>
+    <p>10. COMMUNICATE EFFECTIVELY WITH THE COMPUTING COMMUNITY AND WITH SOCIETY AT LARGE ABOUT COMPLEX COMPUTING ACTIVITIES THROUGH LOGICAL WRITING, PRESENTATIONS, AND CLEAR INSTRUCTIONS.</p><br>
+    <p>11. ANALYZE THE LOCAL AND GLOBAL IMPACT OF COMPUTING INFORMATION TECHNOLOGY ON INDIVIDUALS, ORGANIZATIONS, AND SOCIETY</p><br>
+    <p>12. UNDERSTAND PROFESSIONAL, ETHICAL, LEGAL, SECURITY AND SOCIAL ISSUES AND RESPONSIBILITIES IN THE UTILIZATION OF INFORMATION TECHNOLOGY.</p><br>
+    <p>13. RECOGNIZE THE NEED FOR AND ENGAGE IN PLANNING SELF-LEARNING AND IMPROVING PERFORMANCE AS A FOUNDATION FOR CONTINUING PROFESSIONAL DEVELOPMENT.</p><br>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalAnimation" class="modal-container">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modalAnimation')">&times;</span>
+      <div id="modalContentAnimation">
+        <p>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY - MAJOR IN ANIMATION (BSITAnim)</p>
+        <p>LEARNING OUTCOMES:</p> <br>
+         <p>1. APPLY KNOWLEDGE OF COMPUTING, SCIENCE, AND MATHEMATICS APPROPRIATE TO THE DISCIPLINE.</p> <br>
+        <p>2. UNDERSTAND BEST PRACTICES AND STANDARDS AND THEIR APPLICATIONS</p> <br>
+        <p>3. ANALYZE COMPLEX PROBLEMS, AND IDENTIFY AND DEFINE THE REQUIREMENTS APPROPRIATE TO ITS SOLUTION</p> <br>
+        <p>4. IDENTIFY AND ANALYZE USER NEEDS AND TAKE THEM INTO ACCOUNT IN THE SELECTION, CREATION, EVALUATION AND ADMINISTRATION OF COMPUTER-BASED SYSTEMS OR MULTIMEDIA PROJECTS</p> <br>
+        <p>5. DESIGN, IMPLEMENT, AND EVALUATE A COMPUTER-BASED SYSTEMS OR MULTIMEDIA PROJECTS, AESTHETICS, PROCESS, COMPONENT, OR PROGRAM TO MEET DESIRED NEEDS AND REQUIREMENTS UNDER VARIOUS CONSTRAINTS</p> <br>        <p>6. INTEGRATE IT-BASED OR MULTIMEDIA SOLUTIONS INTO THE USER-ENVIRONMENT EFFECTIVELY</p>
+        <p>7. APPLY THE KNOWLEDGE THROUGH THE USE OF CURRENT TECHNIQUES, SKILLS, TOOLS, AND PRACTICES NECESSARY FOR THE IT AND ANIMATION PROFESSION</p> <br>
+        <p>8. FUNCTION EFFECTIVELY AS A MEMBER OR LEADER OF A DEVELOPMENT TEAM RECOGNIZING THE DIFFERENT ROLES WITHIN A TEAM TO ACCOMPLISH A COMMON GOAL</p> <br>
+        <p>9. ASSIST IN THE CREATION OF AN EFECTIVE IT/MULTIMEDIA PROJECT PLAN</p> <br>
+        <p>10. COMMUNICATE EFFECTIVELY WITH THE COMPUTING AND ARTISTIC COMMUNITY AS WELL AS WITH SOCIETY AT LARGE ABOUT COMPLEX COMPUTING ACTIVITIES AND DESIGN THROUGH LOGICAL WRITING, AESTHETIC PRESENTATIONS, AND CLEAR INSTRUCTIONS.</p> <br> 
+        <p>11. ANALYZE THE LOCAL AND GLOBAL IMPACT OF COMPUTING AND DESIGNING INFORMATION TECHNOLOGY ON INDIVIDUALS, ORGANIZATIONS, AND SOCIETY</p> <br>
+        <p>12. UNDERSTAND PROFESSIONAL, ETHICAL, LEGAL, SECURITY AND SOCIAL ISSUES AND RESPONSIBILITIES RELEVANT TO PROFESSIONAL COMPUTING AND DESIGN PRACTICE</p> <br>
+        <p>13. RECOGNIZE THE NEED FOR, AND HAVE THE ABILITY TO ENGAGE IN CONTINOUS PROFESSIONAL DEVELOPMENT AND LIFELONG LEARNING</p> <br>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function displayModal(modalId) {
+      var modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "block";
+      }
+    }
+
+    function closeModal(modalId) {
+      var modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
